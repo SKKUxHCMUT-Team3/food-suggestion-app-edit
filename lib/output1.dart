@@ -13,7 +13,7 @@ class OutputPage1 extends StatefulWidget {
 }
 
 class _OutputPage1State extends State<OutputPage1> {
-  TextEditingController CtrlTextFormField = TextEditingController();
+  // TextEditingController CtrlTextFormField = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -38,9 +38,9 @@ class _OutputPage1State extends State<OutputPage1> {
             ),
             Container(
               width: double.infinity,
-              // height: 300,
-              alignment: Alignment.centerLeft,
-              padding: const EdgeInsets.all(50),
+              height: 600,
+              // alignment: Alignment.centerLeft,
+              padding: const EdgeInsets.all(10),
               decoration: BoxDecoration(
                 border: Border.all(
                   width: 6,
@@ -48,8 +48,14 @@ class _OutputPage1State extends State<OutputPage1> {
                 ),
               ),
               child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: List.generate(widget.response.length, (index) {
-                  return Text(widget.response[index].toString());
+                  return Text(
+                    "${index + 1}. ${widget.response[index].toString()}",
+                    style: const TextStyle(
+                        fontSize: 20, fontWeight: FontWeight.w600),
+                    textAlign: TextAlign.center,
+                  );
                 }),
               ),
             )

@@ -13,7 +13,7 @@ class _HomeSplashScreenState extends State<HomeSplashScreen> {
   void initState() {
     super.initState();
     Future.delayed(
-      const Duration(seconds: 4),
+      const Duration(seconds: 3),
       () => Navigator.push(
         context,
         MaterialPageRoute(builder: (context) => const FormPage()),
