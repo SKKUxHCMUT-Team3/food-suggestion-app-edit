@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'dart:convert';
+import 'homesplash.dart';
 
 class OutputPage1 extends StatefulWidget {
   // const OutputPage1({super.key});
@@ -58,6 +59,20 @@ class _OutputPage1State extends State<OutputPage1> {
                   );
                 }),
               ),
+            ),
+            ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                primary: Color(0xffFF8A00), // background
+                onPrimary: Colors.white, // foreground
+              ),
+              onPressed: () {
+                Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => HomeSplashScreen()));
+
+                // Get.to(OutputSplashScreen(input: input));
+              },
+              child: const Text('Return to homepage',
+                  style: TextStyle(fontSize: 17)),
             )
           ],
         ),
